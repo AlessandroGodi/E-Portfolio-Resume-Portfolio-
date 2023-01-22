@@ -10,23 +10,22 @@
     <script src="./index.js" defer></script>
     <script src="https://kit.fontawesome.com/c007b64272.js" crossorigin=”anonymous”></script>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
-    (function(){
-        emailjs.init("S2EXlqZEDCqQX0Wwx");
-    })();
-    </script>  
+        (function () {
+            emailjs.init("S2EXlqZEDCqQX0Wwx");
+        })();
+    </script>
 </head>
-
+<!-- HOST WITH GITHUB PAGES -->
 <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="personal-logo" src="./assets/logo.svg" alt="My LOGO">
             </figure>
-            <ul class="nav__link--list">
+            <ul class="nav__link--list" onclick="toggleModal()">
                 <li class="nav__link">
                     <a href="#" class="
                     nav__link--anchor 
@@ -35,11 +34,11 @@
                     ">About</a>
                 </li>
                 <li class="nav__link">
-                    <a href="#" class="
+                    <a href="#projects" class="
                     nav__link--anchor 
                     link__hover-effect 
                     link__hover-effect--black
-                    ">Discord</a>
+                    ">Projects</a>
                 </li>
                 <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
@@ -53,7 +52,7 @@
                     nav__link--anchor 
                     link__hover-effect 
                     link__hover-effect--black
-                    "><i class="fa-solid fa-circle-half-stroke"></i></a>
+                    "><i class="fa-solid fa-circle-half-stroke" onclick="toggleContrast()"></i></a>
                 </li>
             </ul>
         </nav>
@@ -84,9 +83,11 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click" onclick="toggleModal()">
-            <i class="fa-solid fa-envelope"></i>
-        </button>
+        <a href="#">
+            <button class="mail__btn click" onclick="toggleModal()">
+                <i class="fa-solid fa-envelope"></i>
+            </button>
+        </a>
         <a href="#projects" class="scroll">
             <div class="scroll__icon clcik"></div>
         </a>
@@ -108,36 +109,44 @@
                 </p>
                 <div class="modal__languages">
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
-                    <span class="language__name">HTML</span>
+                        <img class="modal__language--img"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                            alt="">
+                        <span class="language__name">HTML</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
-                    <span class="language__name">CSS</span>
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+                        <span class="language__name">CSS</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
-                    <span class="language__name">JavaScript</span>
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                        <span class="language__name">JavaScript</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
-                    <span class="language__name">React(L)</span>
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+                        <span class="language__name">React(L)</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="">
-                    <span class="language__name">TypeScript(L)</span>
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="">
+                        <span class="language__name">TypeScript(L)</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png" alt="">
-                    <span class="language__name">Vue(L)</span>
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png" alt="">
+                        <span class="language__name">Vue(L)</span>
                     </figure>
                     <figure class="modal__language">
-                        <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png" alt="">
-                    <span class="language__name">Nuxt(L)</span>
+                        <img class="modal__language--img"
+                            src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png" alt="">
+                        <span class="language__name">Nuxt(L)</span>
                     </figure>
                     <figure class="modal__language">
                         <img class="modal__language--img" src="https://mobx.js.org/img/mobx.png" alt="">
-                    <span class="language__name">Mobox(L)</span>
+                        <span class="language__name">Mobox(L)</span>
                     </figure>
                 </div>
             </div>
@@ -172,10 +181,19 @@
                 <div class="modal__overlay modal__overlay--success">
                     Thanks for the message! Looking forward to speaking with you soon.
                 </div>
-            </div>  
+            </div>
         </div>
+        <img src="./assets/semi circle.svg" alt="" class="shape shape--0">
+        <img src="./assets/circle.svg" alt="" class="shape shape--1">
+        <img src="./assets/squiggly.svg" alt="" class="shape shape--2">
+        <img src="./assets/circle.svg" alt="" class="shape shape--3">
+        <img src="./assets/triangle.svg" alt="" class="shape shape--4">
+        <img src="./assets/semi circle.svg" alt="" class="shape shape--5">
+        <img src="./assets/squiggly.svg" alt="" class="shape shape--6">
+        <img src="./assets/circle.svg" alt="" class="shape shape--7">
+        <img src="./assets/semi circle.svg" alt="" class="shape shape--8">
     </section>
-    <section>
+    <section id="projects">
         <div class="container">
             <div class="row">
                 <h1 class="section__title">
@@ -280,28 +298,28 @@
                     <img src="./assets/logo.svg" alt="" class="footer__logo--img">
                 </figure>
                 <div class="footer__social--list">
-                    <a href="" class="
+                    <a href="" target="__blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">
                         Github
                     </a>
-                    <a href="" class="
+                    <a href="" target="__blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">
                         LinkedIn
                     </a>
-                    <a href="#landing-page" class="
+                    <a href="#landing-page" onclick="toggleModal()" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
                     ">
-                        Email
+                        Contact
                     </a>
-                    <a href="" class="
+                    <a href="" target="__blank" class="
                     footer__social--link
                     link__hover-effect
                     link__hover-effect--white
